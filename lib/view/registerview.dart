@@ -110,11 +110,11 @@ class _RegisterviewState extends State<Registerview> {
                       Navigator.of(context)
                           .pushNamedAndRemoveUntil('/login/', (Route) => false);
                     },
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Have account? "),
-                        const Text(
+                        Text("Have account? "),
+                        Text(
                           'Login Now',
                           style: TextStyle(
                               color: Colors.deepPurple,

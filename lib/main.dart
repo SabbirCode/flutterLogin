@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:greatflutterapp/dashboard.dart';
+import 'package:greatflutterapp/routes.dart';
 import 'package:greatflutterapp/view/loginview.dart';
 import 'package:greatflutterapp/view/registerview.dart';
+import 'package:greatflutterapp/view/verifyemail.dart';
 
 void main() {
   runApp(
@@ -11,10 +14,12 @@ void main() {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginView(),
+      home: const DashboardView(),
       routes: {
-        '/login/': (context) => const LoginView(),
-        '/register/': (context) => const Registerview(),
+        loginRoute: (context) => const LoginView(),
+        registerRoute: (context) => const Registerview(),
+        emailVerifyRoute: (context) => const Verifyemail(),
+        dashboardRoute: (context) => const DashboardView(),
       },
     ),
   );
